@@ -22,6 +22,7 @@ public class MaxValueEx {
 		else
 			max = z;
 		
+		
 		System.out.printf("%d, %d, %d 중에 가장 큰 수는 %d입니다.", x, y, z, max);
 		scan.close();
 	}
