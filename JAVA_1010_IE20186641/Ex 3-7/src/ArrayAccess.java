@@ -7,7 +7,7 @@ public class ArrayAccess {
 		
 		int intArray[];
 		intArray = new int[5];
-		// int intArray[] = new int[5]; // 배열 생성
+		// int intArray[] = new int[5]; // 선언과 동기에 배열 생성
 		
 		int max = 0;
 		System.out.println("양수 5개를 입력하세요.");
