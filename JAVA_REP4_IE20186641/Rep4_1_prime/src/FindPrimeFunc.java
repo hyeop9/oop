@@ -3,25 +3,20 @@ import java.util.Scanner;
 public class FindPrimeFunc {
 	
 	public static boolean isPrime(int N) {
-		Scanner scanner = new Scanner(System.in);
-		N = scanner.nextInt();
-		
-		boolean is_prime = true;
-		
+
+		boolean isPrime = true;
 		for (int x=2; x<N/2+1; x++) {
 			if (N%x==0) {
-				is_prime = false;
+				isPrime = false;
 				break;
 			}
 		}
-		return isPrime(N);
+		return isPrime;
 	}
 	
-
 	public static void main(String[] args) {
-		
 		int N, i, cnt=0, x;
-		
+
 		for(N=2; N<=1000; N++) {
 			
 			if(isPrime(N) == true) {
@@ -31,7 +26,5 @@ public class FindPrimeFunc {
 		}
 		
 		System.out.printf("\n2부터 1000까지의 소수는 %d개 입니다\n", cnt);
-
 	}
-
 }

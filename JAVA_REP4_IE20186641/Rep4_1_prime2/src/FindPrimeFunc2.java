@@ -35,7 +35,8 @@ public class FindPrimeFunc2 {
 			num++;
 		}
 		
-		System.out.printf("\n2부터 %d개의 소수 : \n\n", N);
+		System.out.printf("\n2부터 %d개의 소수 : \n", N);
+		System.out.println("[1]----------------------------------------------");
 		
 		for(x=0; x<N; x++) {
 			System.out.printf("%4d ", pAry[x]);
@@ -43,12 +44,8 @@ public class FindPrimeFunc2 {
 				System.out.println();
 			
 			if( (x+1)%100 == 0)
-				System.out.println();
+			System.out.printf("[%d]--------------------------------------------\n", x+2);
 		}
-		
-		
 		scanner.close();
-
 	}
-
 }

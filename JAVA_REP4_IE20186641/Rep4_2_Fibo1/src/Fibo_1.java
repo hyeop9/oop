@@ -18,8 +18,5 @@ public class Fibo_1 {
 			Fb = F_new;
 			System.out.printf("F%d = %d\n", i, F_new);
 		}
-	
-
 	}
-
 }
