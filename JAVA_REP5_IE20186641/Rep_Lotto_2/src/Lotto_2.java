@@ -40,18 +40,18 @@ public class Lotto_2 {
 		for (i = 0; i < 6; i++) {
 			for (int j = 0; j < 6; j++) {
 				if (myLotto[i] == lotto[j]) {
-					result[i] = i;
 					cnt++;
+					result[i] = lotto[j];
 				}
 			}
 		}
 
 		// 추첨 결과 출력 =====================
 		System.out.printf("당첨 번호 갯수 : %d\n", cnt);
-		if (cnt >= 1) {
+		if (cnt != 0) {
 			System.out.printf("당첨 번호는 ");
-			for (int j = 0; j < 6; j++) {
-				// System.out.print(result[i] + " ");
+			for (i = 0; i < result.length; i++) {
+				System.out.print(result[i] + " ");
 			}
 			System.out.println("입니다");
 		}
