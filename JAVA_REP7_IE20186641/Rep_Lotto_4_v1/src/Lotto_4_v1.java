@@ -6,21 +6,24 @@ public class Lotto_4_v1 {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-//        int lotto[] = new int[7];
-//        int mylotto[] = new int[6];
-//        int result[] = new int[6];
+        int lotto[] = new int[7];
+        int mylotto[] = new int[6];
+        int result[] = new int[6];
         int cnt, i, win, j, tmp;
         int gen_count = 0;
         int ok_generation;
         String reGame;
 
         do {
-        	int lotto[] = new int[7];
-            int mylotto[] = new int[6];
-            int result[] = new int[6];
-        	cnt = 0; 
-            gen_count = 0;
-            ok_generation = 0;
+        	gen_count = 0;
+        	
+        	for(i=0; i<6; i++) {
+        		mylotto[i] = 0;
+        		lotto[i] = 0;
+        		result[i] = 0;
+        	}
+        	lotto[i] = 0;
+        	
 
             // 로또 번호 선택
             while (gen_count < 6) {

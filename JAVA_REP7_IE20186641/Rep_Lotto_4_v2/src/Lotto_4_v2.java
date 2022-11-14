@@ -62,6 +62,7 @@ public class Lotto_4_v2 {
             }
 
             // 당첨 번호 생성
+            cnt = 0;
             gen_count = 0;
             while (gen_count < 7) {
                 ok_generation = 1;

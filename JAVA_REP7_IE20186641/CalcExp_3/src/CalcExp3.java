@@ -38,8 +38,8 @@ public class CalcExp3 {
 
         sum = v.get(0);
         for (i = 0; i < op.size(); i++) {
+        	int n = v.get(i + 1);
         	String s = op.get(i);
-            int n = v.get(i + 1);
 
             if (s.compareTo("+") == 0) {
                 sum += n;
