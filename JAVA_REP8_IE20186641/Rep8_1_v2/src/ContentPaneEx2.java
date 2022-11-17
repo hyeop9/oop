@@ -4,31 +4,36 @@ import java.util.Random;
 
 public class ContentPaneEx2 extends JFrame {
 
-	Button[] buttons = new Button[51];
-	Random random = new Random();
+    Button[] buttons = new Button[51];
+    Random random = new Random();
 
-	// 밑에 수정
+    ContentPaneEx2() {
+        setTitle("ContentPane과 JFrame 예제");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-	ContentPaneEx2() {
-		setTitle("FlowLayout() 예제");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Container contentPane = getContentPane();
+        contentPane.setBackground(Color.ORANGE);
 
-		Container cp = getContentPane(); 
-		cp.setLayout(new FlowLayout());
+        contentPane.setLayout(new FlowLayout());
 
-		for (int i = 1; i < 45; i++) {
-			JButton b = new JButton(Integer.toString(i));
-			// b.setSize(50, 50);
-			cp.add(b);
-		}
+        for (int i = 1; i <= 50; i++) {
+            String text = "OK" + Integer.toString(i);
 
-		setSize(1000, 600);
-		setVisible(true);
-	}
+            buttons[i] = new Button(text);
+            buttons[i].setFont(new Font("맑은고딕", Font.BOLD, 20));
+            int R = random.nextInt(255);
+            int G = random.nextInt(255);
+            int B = random.nextInt(255);
+            Color c = new Color(R, G, B);
+            buttons[i].setBackground(c);
+            contentPane.add(buttons[i]);
+        }
 
-	public static void main(String[] args) {
-		ContentPaneEx2 frame = new ContentPaneEx2();
-		// frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
+        setSize(400, 600);
+        setVisible(true);
+    }
 
+    public static void main(String[] args) {
+        ContentPaneEx2 frame = new ContentPaneEx2();
+    }
 }

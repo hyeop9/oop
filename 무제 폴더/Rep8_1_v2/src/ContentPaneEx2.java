@@ -2,18 +2,23 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
 
-public class ContentPaneEx1 extends JFrame {
+public class ContentPaneEx2 extends JFrame {
 
-	ContentPaneEx1() {
+	Button[] buttons = new Button[51];
+	Random random = new Random();
 
+	// 밑에 수정
+
+	ContentPaneEx2() {
 		setTitle("FlowLayout() 예제");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		Container cp = getContentPane();
+		Container cp = getContentPane(); 
 		cp.setLayout(new FlowLayout());
 
-		for (int i = 1; i <= 45; i++) {
+		for (int i = 1; i < 45; i++) {
 			JButton b = new JButton(Integer.toString(i));
+			// b.setSize(50, 50);
 			cp.add(b);
 		}
 
@@ -22,8 +27,8 @@ public class ContentPaneEx1 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		ContentPaneEx1 frame = new ContentPaneEx1();
-
+		ContentPaneEx2 frame = new ContentPaneEx2();
+		// frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 }
