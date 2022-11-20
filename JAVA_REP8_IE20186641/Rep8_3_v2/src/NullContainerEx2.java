@@ -15,7 +15,7 @@ class NullContainer extends JFrame {
 
         for (int i = 1; i <= 45; i++) {
             JButton b = new JButton(Integer.toString(i));
-            b.setSize(100, 100);
+            b.setSize(70, 50);
 
             xPos = 100 * (xind - 1) + Hgap * xind;
             yPos = 100 * (yind - 1) + Vgap * yind;
@@ -31,7 +31,7 @@ class NullContainer extends JFrame {
             }
             cp.add(b);
         }
-    setSize(1000, 560);
+    setSize(x, y);
     setVisible(true);
     }
 }
