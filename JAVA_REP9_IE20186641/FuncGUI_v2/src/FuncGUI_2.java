@@ -3,7 +3,6 @@ import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 
-
 public class FuncGUI_2 extends JFrame{
 
 	JButton prime, digitSum, reset;
@@ -63,9 +62,11 @@ public class FuncGUI_2 extends JFrame{
 
 			if (e.getSource() == prime) {
 				tf.setText("N 이하의 소수 찾기");
+				findPrime();
 			}
 			else if (e.getSource() == digitSum) {
 				tf.setText("자연수 N의 각 자리값의 합 구하기");
+				digitSum();
 			}
 			else if (e.getSource() == reset) {
 				tf.setText("");
